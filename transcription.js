@@ -110,6 +110,10 @@ function uploadAudio(blob) {
   fetch(`${API_DOMAIN}/uploadAudio`, {
     method: 'POST',
     body: formData,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
   })
     .then(async (response) => {
       const res = await response.json();
