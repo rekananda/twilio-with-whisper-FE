@@ -107,7 +107,7 @@ function uploadAudio(blob) {
   formData.append('audio', file);
   console.log(formData)
 
-  fetch(`${API_DOMAIN}/join-room`, {
+  fetch(`${API_DOMAIN}/uploadAudio`, {
     method: 'POST',
     body: formData,
   })
